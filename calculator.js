@@ -1,4 +1,4 @@
-<script >
+
 const formInputWrappers = document.querySelectorAll(
   '[calc-element="input-wrapper"]'
 );
@@ -449,4 +449,4 @@ window.onload = calculateSavings;
 // Updating the results on a click event
 document.addEventListener("click", calculateSavings);
 
-</script>
+
