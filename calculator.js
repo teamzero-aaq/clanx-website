@@ -214,7 +214,7 @@ function calculateAndDisplay() {
     '[calc-result="monthly-all-cost"]'
   );
   calcResultElement.innerHTML = formattedMonthAllTotal;
-console.log("month", formattedMonthAllTotal, "round",roundedMonthAllTotal);
+// console.log("month", formattedMonthAllTotal, "round",roundedMonthAllTotal);
   // Quarterly Calculation
   const quarterAllTotal = Math.ceil(monthAllTotal * 3 * 0.85 * 83);
   const formattedQuarterAllTotal = quarterAllTotal.toLocaleString();
