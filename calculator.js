@@ -213,7 +213,7 @@ function calculateAndDisplay() {
   const calcResultElement = document.querySelector(
     '[calc-result="monthly-all-cost"]'
   );
-  calcResultElement.innerHTML = formattedMonthAllTotal;
+  calcResultElement.innerHTML = formattedMonthAllTotal * 83;
 
   // Quarterly Calculation
   const quarterAllTotal = Math.ceil(monthAllTotal * 3 * 0.85);
@@ -221,7 +221,7 @@ function calculateAndDisplay() {
   const calcResultQuarterElement = document.querySelector(
     '[calc-result="quarter-all-cost"]'
   );
-  calcResultQuarterElement.innerHTML = formattedQuarterAllTotal;
+  calcResultQuarterElement.innerHTML = formattedQuarterAllTotal * 83;
 
   // Annual Calculation
   const annualAllTotal = Math.ceil(monthAllTotal * 12 * 0.8);
@@ -229,7 +229,7 @@ function calculateAndDisplay() {
   const calcResultAnnualElement = document.querySelector(
     '[calc-result="annual-all-cost"]'
   );
-  calcResultAnnualElement.innerHTML = formattedAnnualAllTotal;
+  calcResultAnnualElement.innerHTML = formattedAnnualAllTotal * 83;
 
   return monthAllTotal; // Return the total value
 }
