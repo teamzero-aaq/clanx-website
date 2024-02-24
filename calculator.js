@@ -207,29 +207,29 @@ function calculateAndDisplay() {
     monthGrexTotal +
     monthGeaiTotal +
     monthWebeTotal;
-  const roundedMonthAllTotal = Math.ceil(monthAllTotal);
+  const roundedMonthAllTotal = Math.ceil(monthAllTotal * 83);
   const formattedMonthAllTotal = roundedMonthAllTotal.toLocaleString();
 
   const calcResultElement = document.querySelector(
     '[calc-result="monthly-all-cost"]'
   );
-  calcResultElement.innerHTML = formattedMonthAllTotal * 83;
+  calcResultElement.innerHTML = formattedMonthAllTotal;
 
   // Quarterly Calculation
-  const quarterAllTotal = Math.ceil(monthAllTotal * 3 * 0.85);
+  const quarterAllTotal = Math.ceil(monthAllTotal * 3 * 0.85 * 83);
   const formattedQuarterAllTotal = quarterAllTotal.toLocaleString();
   const calcResultQuarterElement = document.querySelector(
     '[calc-result="quarter-all-cost"]'
   );
-  calcResultQuarterElement.innerHTML = formattedQuarterAllTotal * 83;
+  calcResultQuarterElement.innerHTML = formattedQuarterAllTotal;
 
   // Annual Calculation
-  const annualAllTotal = Math.ceil(monthAllTotal * 12 * 0.8);
+  const annualAllTotal = Math.ceil(monthAllTotal * 12 * 0.8 * 83);
   const formattedAnnualAllTotal = annualAllTotal.toLocaleString();
   const calcResultAnnualElement = document.querySelector(
     '[calc-result="annual-all-cost"]'
   );
-  calcResultAnnualElement.innerHTML = formattedAnnualAllTotal * 83;
+  calcResultAnnualElement.innerHTML = formattedAnnualAllTotal;
 
   return monthAllTotal; // Return the total value
 }
